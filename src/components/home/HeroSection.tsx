@@ -238,9 +238,9 @@ export default function HeroSection() {
                 transition={{ duration: 0.55, delay: 0.08, ease: "easeOut" }}
                 className="mt-6 sm:mt-7 lg:mt-8"
               >
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[44px] xl:text-[54px] 2xl:text-[64px] font-black font-heading text-[#051D67] leading-[1.1] tracking-[-0.03em]">
-                  <span className="block">Smarter Financial Strategy.</span>
-                  <span className="block mt-1 sm:mt-1.5">
+                <h1 className="text-[22px] min-[380px]:text-[24px] sm:text-[30px] md:text-[34px] lg:text-[38px] xl:text-[44px] 2xl:text-[50px] font-black font-heading text-[#051D67] leading-[1.15] tracking-[-0.03em]">
+                  <span className="block whitespace-nowrap">Smarter Financial Strategy.</span>
+                  <span className="block mt-1 sm:mt-1.5 whitespace-nowrap">
                     <span className="text-[#00D084]">Stronger</span>{" "}
                     <span className="text-[#051D67]">Business Growth.</span>
                   </span>
