@@ -89,64 +89,45 @@ function FractionalCFOIcon({ className }: { className?: string }) {
   );
 }
 
-// Financial Consulting - Calculator with Screen & 6 Filled Keys + Enter Key (Exact Match to calc_zoom_latest.png)
+// Financial Consulting - Exact match to financial-consulting.svg
 function FinancialConsultingIcon({ className }: { className?: string }) {
   return (
     <svg
-      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 64 64"
       fill="none"
-      className={className}
-      stroke="#00D084"
-      strokeWidth="2.2"
+      stroke="#00D889"
+      strokeWidth="4"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className={className}
+      style={{ strokeWidth: 4 }}
     >
-      {/* Rounded Calculator Body */}
-      <rect x="4.5" y="2.5" width="15" height="19" rx="3.5" />
-      {/* Top Display Screen Slot */}
-      <rect x="6.8" y="5.2" width="10.4" height="2.8" rx="0.8" strokeWidth="1.8" />
-      {/* Row 1 Keys (2 filled rounded squares + 1 horizontal dash key) */}
-      <rect x="7.2" y="10" width="2.2" height="2" rx="0.5" fill="#00D084" stroke="none" />
-      <rect x="10.9" y="10" width="2.2" height="2" rx="0.5" fill="#00D084" stroke="none" />
-      <rect x="14.6" y="10.2" width="2.2" height="1.6" rx="0.4" fill="#00D084" stroke="none" />
-      {/* Row 2 Keys */}
-      <rect x="7.2" y="13.2" width="2.2" height="2" rx="0.5" fill="#00D084" stroke="none" />
-      <rect x="10.9" y="13.2" width="2.2" height="2" rx="0.5" fill="#00D084" stroke="none" />
-      {/* Row 3 Keys */}
-      <rect x="7.2" y="16.4" width="2.2" height="2" rx="0.5" fill="#00D084" stroke="none" />
-      <rect x="10.9" y="16.4" width="2.2" height="2" rx="0.5" fill="#00D084" stroke="none" />
-      {/* Tall Inverted-L Enter Key on Right Spanning Row 2-3 */}
-      <path
-        d="M14.6 13.4 H16.8 V18.2 H14.6"
-        strokeWidth="1.8"
-        fill="none"
-      />
+      <rect x="10" y="5" width="44" height="54" rx="5" />
+      <path d="M18 15h28v11H18z" />
+      <path d="M19 35h3m10 0h3m10 0h1M19 44h3m10 0h3M19 53h3m10 0h3M45 43v10" />
     </svg>
   );
 }
 
-// Strategic Planning - Concentric Bullseye Target with Arrow (Exact Match to target_zoom_latest.png)
+// Strategic Planning - Exact match to strategic-planning.svg
 function StrategicPlanningIcon({ className }: { className?: string }) {
   return (
     <svg
-      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 64 64"
       fill="none"
-      className={className}
-      stroke="#00D084"
-      strokeWidth="2.3"
+      stroke="#00D889"
+      strokeWidth="4"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className={className}
+      style={{ strokeWidth: 4 }}
     >
-      {/* Outer target ring with arrow entry gap */}
-      <path d="M 14.5 6.0 A 8.5 8.5 0 1 0 18.6 10.9" />
-      {/* Middle target ring with arrow entry gap */}
-      <path d="M 13.0 9.0 A 5.2 5.2 0 1 0 15.4 11.9" />
-      {/* Bullseye center ring */}
-      <circle cx="10.5" cy="13.5" r="2.2" />
-      {/* Arrow shaft hitting center from top-right */}
-      <path d="M 11.2 12.8 L 19.5 4.5" />
-      {/* Arrow tail fletching V-notch feathers at top right */}
-      <path d="M 16.5 3.8 L 21.0 2.0 L 19.2 6.5" />
+      <path d="M49 13A25 25 0 1 0 57 32" />
+      <path d="M42 21a15 15 0 1 0 5 11" />
+      <circle cx="32" cy="32" r="5" />
+      <path d="M32 32 52 12m-1-8 1 8 8 1-8 8" />
     </svg>
   );
 }
@@ -201,7 +182,7 @@ export default function HeroSection() {
     {
       line1: "Business Process",
       line2: "Optimization",
-      icon: Handshake,
+      icon: (props: { className?: string }) => <Handshake {...props} strokeWidth={2.3} />,
       href: "/services/business-strategy-operational-consulting",
     },
   ];
@@ -372,7 +353,7 @@ export default function HeroSection() {
                     className="py-5 sm:py-6 lg:py-7 px-3.5 sm:px-4 lg:px-5 flex items-center gap-3.5 sm:gap-4.5 justify-center md:justify-start hover:bg-white/5 transition-all duration-300 group cursor-pointer"
                   >
                     <div className="w-10 h-10 sm:w-11 sm:h-11 lg:w-12 lg:h-12 rounded-xl bg-transparent text-[#00D084] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110">
-                      <IconComponent className="w-9 sm:w-10 lg:w-11 h-9 sm:h-10 lg:h-11 stroke-[2.3]" />
+                      <IconComponent className="w-9 sm:w-10 lg:w-11 h-9 sm:h-10 lg:h-11" />
                     </div>
                     <div className="text-left">
                       <span className="block text-sm sm:text-[15px] lg:text-[16px] font-bold text-white group-hover:text-slate-100 leading-snug">
