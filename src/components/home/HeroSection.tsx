@@ -189,7 +189,7 @@ export default function HeroSection() {
 
   return (
     <>
-      <section className="relative pt-[180px] sm:pt-[195px] lg:pt-[210px] pb-12 sm:pb-16 lg:pb-20 overflow-hidden bg-[#FAF7F2]">
+      <section className="relative pt-[124px] sm:pt-[132px] lg:pt-[138px] pb-6 sm:pb-8 lg:pb-10 overflow-hidden bg-[#FAF7F2]">
         {/* Organic Flowing Wave Background (Exact Pin-to-Pin Match to Reference Image 1) */}
         <div
           className="absolute inset-0 pointer-events-none -z-10"
@@ -213,34 +213,34 @@ export default function HeroSection() {
           />
         </svg>
 
-        <div className="max-w-7xl xl:max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+        <div className="max-w-[1480px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-10 relative z-10 w-full">
           {/* Main Two-Column Hero Composition - Top-aligned per Image 1 */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 xl:gap-10 items-center">
             {/* Left Side (Approx 58% / 7 cols) - relative z-10 ensures text is always above background */}
             <div className="lg:col-span-7 xl:col-span-7 text-left relative z-10">
               {/* Mint Pill Badge with Two-Tone Graph Icon - Exact match to Image 1 */}
               <motion.div
-                initial={{ opacity: 0, y: 12 }}
+                initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.45, ease: "easeOut" }}
-                className="inline-flex items-center gap-2.5 px-5 sm:px-6 py-2.5 rounded-full bg-[#E5F6EE] border border-[#BBEBD8]/60 shadow-xs"
+                className="inline-flex items-center gap-2 px-3.5 sm:px-4.5 py-1.5 sm:py-2 rounded-full bg-[#E5F6EE] border border-[#BBEBD8]/60 shadow-xs"
               >
-                <StrategicBadgeIcon className="w-4.5 h-4.5 shrink-0" />
-                <span className="text-xs sm:text-[14px] lg:text-[15px] font-semibold text-[#051D67] tracking-tight">
+                <StrategicBadgeIcon className="w-4 h-4 shrink-0" />
+                <span className="text-xs sm:text-[13px] lg:text-[14px] font-semibold text-[#051D67] tracking-tight">
                   Strategic Financial Advisory for Business Growth
                 </span>
               </motion.div>
 
-              {/* Main Headline - Bold, dominant typography matching Image 1 without overflowing */}
+              {/* Main Headline - Bold, dominant typography strictly in 2 lines */}
               <motion.div
-                initial={{ opacity: 0, y: 18 }}
+                initial={{ opacity: 0, y: 14 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.55, delay: 0.08, ease: "easeOut" }}
-                className="mt-6 sm:mt-7 lg:mt-8"
+                transition={{ duration: 0.5, delay: 0.08, ease: "easeOut" }}
+                className="mt-3 sm:mt-4 lg:mt-4.5"
               >
-                <h1 className="text-[22px] min-[380px]:text-[24px] sm:text-[30px] md:text-[34px] lg:text-[38px] xl:text-[44px] 2xl:text-[50px] font-black font-heading text-[#051D67] leading-[1.15] tracking-[-0.03em]">
+                <h1 className="text-[24px] min-[390px]:text-[26px] sm:text-[32px] md:text-[36px] lg:text-[40px] xl:text-[46px] 2xl:text-[52px] font-black font-heading text-[#051D67] leading-[1.12] tracking-[-0.03em]">
                   <span className="block whitespace-nowrap">Smarter Financial Strategy.</span>
-                  <span className="block mt-1 sm:mt-1.5 whitespace-nowrap">
+                  <span className="block mt-0.5 sm:mt-1 whitespace-nowrap">
                     <span className="text-[#00D084]">Stronger</span>{" "}
                     <span className="text-[#051D67]">Business Growth.</span>
                   </span>
@@ -249,37 +249,37 @@ export default function HeroSection() {
 
               {/* Supporting Paragraph - High-contrast navy text */}
               <motion.p
-                initial={{ opacity: 0, y: 16 }}
+                initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.55, delay: 0.16, ease: "easeOut" }}
-                className="mt-5 sm:mt-6 text-base sm:text-lg lg:text-[19px] text-[#1F2A44] leading-[1.55] max-w-[620px] font-normal"
+                transition={{ duration: 0.5, delay: 0.14, ease: "easeOut" }}
+                className="mt-3 sm:mt-3.5 lg:mt-4 text-xs sm:text-sm lg:text-[16px] xl:text-[17px] text-[#1F2A44] leading-[1.5] max-w-[580px] font-normal"
               >
                 Fractional CFO services, profit optimization, and business consulting to help you understand your numbers, improve profitability, and achieve sustainable growth.
               </motion.p>
 
-              {/* CTA Row with Book a Consultation and Watch My Work - Enlarged dimensions */}
+              {/* CTA Row with Book a Consultation and Watch My Work */}
               <motion.div
-                initial={{ opacity: 0, y: 16 }}
+                initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.22, ease: "easeOut" }}
-                className="mt-7 sm:mt-8 lg:mt-9 flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-5"
+                transition={{ duration: 0.45, delay: 0.2, ease: "easeOut" }}
+                className="mt-4 sm:mt-5 lg:mt-6 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4"
               >
                 {/* Primary Solid Navy Button */}
                 <button
                   onClick={() => openBookingModal()}
-                  className="h-14 sm:h-[58px] px-8 sm:px-9 rounded-full text-[15px] sm:text-[16px] font-bold bg-[#051D67] hover:bg-[#07247a] text-white transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 flex items-center justify-center gap-2.5 cursor-pointer group"
+                  className="h-11 sm:h-12 lg:h-[48px] px-6 sm:px-7 rounded-full text-xs sm:text-sm font-bold bg-[#051D67] hover:bg-[#07247a] text-white transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 flex items-center justify-center gap-2 cursor-pointer group"
                 >
                   <span>Book a Consultation</span>
-                  <ArrowRight className="w-4 sm:w-4.5 h-4 sm:h-4.5 transition-transform duration-300 group-hover:translate-x-1" />
+                  <ArrowRight className="w-3.5 sm:w-4 h-3.5 sm:h-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </button>
 
                 {/* Secondary Outlined Button with Play Icon: Watch My Work */}
                 <button
                   onClick={() => setWatchModalOpen(true)}
-                  className="h-14 sm:h-[58px] px-8 sm:px-9 rounded-full text-[15px] sm:text-[16px] font-bold border-2 border-[#051D67] text-[#051D67] bg-white hover:bg-slate-50 transition-all duration-300 flex items-center justify-center gap-2.5 cursor-pointer shadow-xs group"
+                  className="h-11 sm:h-12 lg:h-[48px] px-6 sm:px-7 rounded-full text-xs sm:text-sm font-bold border-2 border-[#051D67] text-[#051D67] bg-white hover:bg-slate-50 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer shadow-xs group"
                 >
-                  <div className="w-5 sm:w-6 h-5 sm:h-6 rounded-full border-2 border-[#051D67] flex items-center justify-center">
-                    <Play className="w-2.5 h-2.5 text-[#051D67] fill-current ml-0.5" />
+                  <div className="w-4.5 sm:w-5 h-4.5 sm:h-5 rounded-full border-2 border-[#051D67] flex items-center justify-center">
+                    <Play className="w-2 sm:w-2.5 h-2 sm:h-2.5 text-[#051D67] fill-current ml-0.5" />
                   </div>
                   <span>Watch My Work</span>
                 </button>
@@ -287,26 +287,26 @@ export default function HeroSection() {
             </div>
 
             {/* Right Side (Approx 42% / 5 cols) - Landscape Portrait with Mint Backdrop & Halftone Grid */}
-            <div className="lg:col-span-5 flex justify-center lg:justify-end items-start w-full lg:pt-1 relative z-0">
-              <div className="relative w-full max-w-[420px] sm:max-w-[460px] lg:max-w-[460px] xl:max-w-[500px]">
+            <div className="lg:col-span-5 flex justify-center lg:justify-end items-center w-full relative z-0">
+              <div className="relative w-full max-w-[380px] sm:max-w-[420px] lg:max-w-[450px] xl:max-w-[490px]">
                 {/* Decorative Pale Mint Background Shape behind image */}
-                <div className="absolute -inset-4 sm:-inset-6 bg-[#EBF7F2] rounded-[36px] sm:rounded-[42px] -z-10 hidden sm:block" />
+                <div className="absolute -inset-3 sm:-inset-4 bg-[#EBF7F2] rounded-[30px] sm:rounded-[36px] -z-10 hidden sm:block" />
 
                 {/* Halftone Emerald Dot Grid Matrix on the Right (14 rows x 4 cols, exact match to Image 1) */}
-                <div className="absolute top-1/2 -right-6 sm:-right-8 lg:-right-10 -translate-y-1/2 flex flex-col gap-[7.5px] -z-10 hidden sm:flex">
+                <div className="absolute top-1/2 -right-5 sm:-right-7 lg:-right-8 -translate-y-1/2 flex flex-col gap-[6.5px] -z-10 hidden sm:flex">
                   {DOT_GRID_ROWS.map((row, rIdx) => (
-                    <div key={rIdx} className="flex gap-[8.5px] items-center">
+                    <div key={rIdx} className="flex gap-[7px] items-center">
                       {row.map((dot, cIdx) => (
                         <div
                           key={cIdx}
-                          className="w-3 h-3 flex items-center justify-center shrink-0"
+                          className="w-2.5 h-2.5 flex items-center justify-center shrink-0"
                         >
                           {dot && (
                             <span
                               className="rounded-full bg-[#00D084]"
                               style={{
-                                width: `${dot.size}px`,
-                                height: `${dot.size}px`,
+                                width: `${dot.size * 0.9}px`,
+                                height: `${dot.size * 0.9}px`,
                               }}
                             />
                           )}
@@ -316,19 +316,19 @@ export default function HeroSection() {
                   ))}
                 </div>
 
-                {/* Abraham Cohen Portrait Container - Landscape aspect ratio ~1.28:1 matching Image 1 */}
+                {/* Abraham Cohen Portrait Container - Landscape aspect ratio ~1.32:1 matching Image 1 */}
                 <motion.div
                   initial={{ opacity: 0, scale: 0.96 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.7, delay: 0.18, ease: "easeOut" }}
-                  className="relative w-full aspect-[1.28/1] rounded-[28px] sm:rounded-[32px] overflow-hidden shadow-2xl bg-slate-200 group"
+                  transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" }}
+                  className="relative w-full aspect-[1.32/1] rounded-[24px] sm:rounded-[28px] overflow-hidden shadow-xl bg-slate-200 group"
                 >
                   <Image
                     src="/hero.webp"
                     alt="Abraham Cohen - Strategic Financial Advisor"
                     fill
                     priority
-                    sizes="(max-width: 640px) 480px, (max-width: 1024px) 540px, 580px"
+                    sizes="(max-width: 640px) 420px, (max-width: 1024px) 450px, 490px"
                     className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.02]"
                   />
                 </motion.div>
@@ -336,12 +336,12 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Floating Dark Navy Service Strip - Full-width, taller container matching Image 1 */}
+          {/* Floating Dark Navy Service Strip - Perfectly proportioned to fit above the fold on all displays */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
-            className="mt-12 sm:mt-14 lg:mt-16 w-full bg-[#051D67] text-white rounded-[26px] sm:rounded-[30px] shadow-2xl overflow-hidden border border-white/10"
+            transition={{ duration: 0.5, delay: 0.25, ease: "easeOut" }}
+            className="mt-6 sm:mt-7 lg:mt-8 w-full bg-[#051D67] text-white rounded-[20px] sm:rounded-[24px] shadow-2xl overflow-hidden border border-white/10"
           >
             <div className="grid grid-cols-2 md:grid-cols-5 divide-y md:divide-y-0 md:divide-x divide-white/15">
               {stripItems.map((item, index) => {
@@ -350,16 +350,16 @@ export default function HeroSection() {
                   <Link
                     key={index}
                     href={item.href}
-                    className="py-5 sm:py-6 lg:py-7 px-3.5 sm:px-4 lg:px-5 flex items-center gap-3.5 sm:gap-4.5 justify-center md:justify-start hover:bg-white/5 transition-all duration-300 group cursor-pointer"
+                    className="py-3.5 sm:py-4 lg:py-4.5 px-3 sm:px-4 lg:px-5 flex items-center gap-3 sm:gap-4 justify-center md:justify-start hover:bg-white/5 transition-all duration-300 group cursor-pointer"
                   >
-                    <div className="w-10 h-10 sm:w-11 sm:h-11 lg:w-12 lg:h-12 rounded-xl bg-transparent text-[#00D084] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110">
-                      <IconComponent className="w-9 sm:w-10 lg:w-11 h-9 sm:h-10 lg:h-11" />
+                    <div className="w-9 h-9 sm:w-10 sm:h-10 lg:w-11 lg:h-11 rounded-xl bg-transparent text-[#00D084] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110">
+                      <IconComponent className="w-7 sm:w-8 lg:w-9 h-7 sm:h-8 lg:h-9" />
                     </div>
                     <div className="text-left">
-                      <span className="block text-sm sm:text-[15px] lg:text-[16px] font-bold text-white group-hover:text-slate-100 leading-snug">
+                      <span className="block text-xs sm:text-[13px] lg:text-[14px] font-bold text-white group-hover:text-slate-100 leading-tight">
                         {item.line1}
                       </span>
-                      <span className="block text-sm sm:text-[15px] lg:text-[16px] font-bold text-white group-hover:text-slate-100 leading-snug">
+                      <span className="block text-xs sm:text-[13px] lg:text-[14px] font-bold text-white group-hover:text-slate-100 leading-tight">
                         {item.line2}
                       </span>
                     </div>
