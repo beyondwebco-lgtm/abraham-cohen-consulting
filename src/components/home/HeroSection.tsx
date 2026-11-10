@@ -14,14 +14,41 @@ import { useBookingModal } from "@/context/BookingModalContext";
 import WatchMyWorkModal from "@/components/WatchMyWorkModal";
 
 // Exact SVG Icons Matching Reference Navy Bar (crop_navy.png)
+// Two-Tone Graph Icon Matching Reference Badge (media_1794313620315.png)
+function StrategicBadgeIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={className}>
+      {/* 4 Navy Bars */}
+      <rect x="2.5" y="14" width="2.8" height="6.5" rx="1.4" fill="#051D67" />
+      <rect x="7.3" y="11" width="2.8" height="9.5" rx="1.4" fill="#051D67" />
+      <rect x="12.1" y="11.5" width="2.8" height="9" rx="1.4" fill="#051D67" />
+      <rect x="16.9" y="8" width="2.8" height="12.5" rx="1.4" fill="#051D67" />
+      {/* Emerald Green Zig-Zag Trend Line */}
+      <path
+        d="M2.5 13 L8 7.5 L12 10.2 L18.5 3.5"
+        stroke="#00D084"
+        strokeWidth="2.4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      {/* Emerald Green Solid Arrowhead */}
+      <path
+        d="M14 3.2 H19.5 V8.7 Z"
+        fill="#00D084"
+      />
+    </svg>
+  );
+}
+
+// Exact SVG Icons Matching Reference Navy Bar (cfo_zoom.png, calc_zoom.png, strat_zoom.png)
 function ProfitOptimizationIcon({ className }: { className?: string }) {
   return (
     <svg
       viewBox="0 0 24 24"
       fill="none"
       className={className}
-      stroke="currentColor"
-      strokeWidth="2.2"
+      stroke="#00D084"
+      strokeWidth="2.3"
       strokeLinecap="round"
       strokeLinejoin="round"
     >
@@ -36,72 +63,91 @@ function ProfitOptimizationIcon({ className }: { className?: string }) {
   );
 }
 
+// Fractional CFO - Dual Figures with Collar Arc (Exact Match to cfo_zoom.png)
 function FractionalCFOIcon({ className }: { className?: string }) {
   return (
     <svg
       viewBox="0 0 24 24"
       fill="none"
       className={className}
-      stroke="currentColor"
-      strokeWidth="2.2"
+      stroke="#00D084"
+      strokeWidth="2.3"
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      <circle cx="9" cy="7" r="3.5" />
-      <path d="M2.5 20 C2.5 15.5 5.5 13.5 9 13.5 C12.5 13.5 15.5 15.5 15.5 20" />
-      <circle cx="17.5" cy="8" r="3" />
-      <path d="M15.5 14 C17.5 14.2 21 15.5 21 20" />
+      {/* Front Person Head */}
+      <circle cx="8.5" cy="6.5" r="3.5" />
+      {/* Front Person Shoulders */}
+      <path d="M2.5 19 C2.5 14.5 5.2 12.5 8.5 12.5 C11.8 12.5 14.5 14.5 14.5 19" />
+      {/* Front Person Inner Collar/Chest arc */}
+      <path d="M6.2 16.5 C7 15.8 7.8 15.5 8.5 15.5 C9.2 15.5 10 15.8 10.8 16.5" />
+      {/* Back Person Head */}
+      <circle cx="16.5" cy="7.5" r="2.8" />
+      {/* Back Person Shoulders */}
+      <path d="M14.5 14 C16.2 13.8 19.5 14.8 19.5 19" />
     </svg>
   );
 }
 
+// Financial Consulting - Calculator with Screen & 6 Filled Keys + Enter Key (Exact Match to calc_zoom.png)
 function FinancialConsultingIcon({ className }: { className?: string }) {
   return (
     <svg
       viewBox="0 0 24 24"
       fill="none"
       className={className}
-      stroke="currentColor"
-      strokeWidth="2.2"
+      stroke="#00D084"
+      strokeWidth="2.3"
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      <rect x="4" y="2.5" width="16" height="19.5" rx="3.5" />
-      <rect x="7" y="5.5" width="10" height="3.5" rx="1" />
-      {/* 6 outlined grid buttons */}
-      <rect x="7.5" y="11" width="2.8" height="2.2" rx="0.6" strokeWidth="2" />
-      <rect x="13.7" y="11" width="2.8" height="2.2" rx="0.6" strokeWidth="2" />
-      <rect x="7.5" y="14.8" width="2.8" height="2.2" rx="0.6" strokeWidth="2" />
-      <rect x="13.7" y="14.8" width="2.8" height="2.2" rx="0.6" strokeWidth="2" />
-      <rect x="7.5" y="18.2" width="2.8" height="2.2" rx="0.6" strokeWidth="2" />
-      <rect x="13.7" y="18.2" width="2.8" height="2.2" rx="0.6" strokeWidth="2" />
+      {/* Rounded Calculator Body */}
+      <rect x="4.5" y="2.5" width="15" height="19.5" rx="3.5" />
+      {/* Top Display Screen Line */}
+      <path d="M7 6.8 H17" />
+      {/* Row 1 Keys (3 filled rounded squares) */}
+      <rect x="7.2" y="9.8" width="2.2" height="2" rx="0.4" fill="#00D084" stroke="none" />
+      <rect x="10.9" y="9.8" width="2.2" height="2" rx="0.4" fill="#00D084" stroke="none" />
+      <rect x="14.6" y="9.8" width="2.2" height="2" rx="0.4" fill="#00D084" stroke="none" />
+      {/* Row 2 Keys */}
+      <rect x="7.2" y="13" width="2.2" height="2" rx="0.4" fill="#00D084" stroke="none" />
+      <rect x="10.9" y="13" width="2.2" height="2" rx="0.4" fill="#00D084" stroke="none" />
+      {/* Row 3 Keys */}
+      <rect x="7.2" y="16.2" width="2.2" height="2" rx="0.4" fill="#00D084" stroke="none" />
+      <rect x="10.9" y="16.2" width="2.2" height="2" rx="0.4" fill="#00D084" stroke="none" />
+      {/* Enter Key on Right spanning Row 2-3 */}
+      <path
+        d="M14.6 13.2 H16.8 V18.2 H14.6 V16.4"
+        strokeWidth="1.6"
+        fill="none"
+      />
     </svg>
   );
 }
 
-// Bullseye Target with Dart / Arrow entering from top-right (Exact match to crop_navy.png)
+// Strategic Planning - Concentric Bullseye Target with Arrow (Exact Match to strat_zoom.png)
 function StrategicPlanningIcon({ className }: { className?: string }) {
   return (
     <svg
       viewBox="0 0 24 24"
       fill="none"
       className={className}
-      stroke="currentColor"
-      strokeWidth="2.2"
+      stroke="#00D084"
+      strokeWidth="2.3"
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      {/* 3 Concentric rings */}
-      <circle cx="11" cy="13" r="8.5" />
-      <circle cx="11" cy="13" r="5.2" />
+      {/* Outer target ring with entrance gap */}
+      <path d="M18.8 8.5 A8.5 8.5 0 1 0 15.5 19.8 A8.5 8.5 0 0 0 19.5 13" />
+      {/* Middle target ring with entrance gap */}
+      <path d="M15.8 9.5 A5.2 5.2 0 1 0 14 16.5 A5.2 5.2 0 0 0 16.2 13" />
+      {/* Bullseye center ring */}
       <circle cx="11" cy="13" r="2.2" />
       {/* Arrow shaft hitting center from top-right */}
-      <path d="M12.5 11.5 L21.5 2.5" />
-      {/* Arrow tip at center */}
-      <path d="M11 13 L15 12" />
-      <path d="M11 13 L12 9" />
-      {/* Arrow feathers at top right */}
-      <path d="M18 2.5 L21.5 2.5 L21.5 6" />
+      <path d="M12.5 11.5 L20.5 3.5" />
+      {/* Arrow tail fletching feathers */}
+      <path d="M17 3.5 L20.5 3.5 L20.5 7" />
+      <path d="M18.5 2.5 L21.5 2.5 L21.5 5.5" />
     </svg>
   );
 }
@@ -199,9 +245,7 @@ export default function HeroSection() {
                 transition={{ duration: 0.45, ease: "easeOut" }}
                 className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#D8F5EB] border border-[#B2EBD7] shadow-xs"
               >
-                <div className="w-4 h-4 rounded bg-[#00D084]/20 flex items-center justify-center text-[#00A86B] shrink-0">
-                  <BarChart2 className="w-3.5 h-3.5 stroke-[2.4]" />
-                </div>
+                <StrategicBadgeIcon className="w-4 h-4 shrink-0" />
                 <span className="text-xs sm:text-[13px] font-semibold text-[#051D67] tracking-tight">
                   Strategic Financial Advisory for Business Growth
                 </span>
