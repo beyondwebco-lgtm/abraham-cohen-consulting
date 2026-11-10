@@ -6,16 +6,123 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
-  TrendingUp,
-  Users,
-  Calculator,
-  Target,
   Handshake,
   Play,
   BarChart2,
 } from "lucide-react";
 import { useBookingModal } from "@/context/BookingModalContext";
 import WatchMyWorkModal from "@/components/WatchMyWorkModal";
+
+// Exact SVG Icons Matching Reference Navy Bar (crop_navy.png)
+function ProfitOptimizationIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      className={className}
+      stroke="currentColor"
+      strokeWidth="2.2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M3 13 L8 8 L13 13 L21 4" />
+      <path d="M16 4 H21 V9" />
+      <path d="M4 21 V17" />
+      <path d="M9 21 V13" />
+      <path d="M14 21 V16" />
+      <path d="M19 21 V10" />
+      <path d="M2 21 H22" />
+    </svg>
+  );
+}
+
+function FractionalCFOIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      className={className}
+      stroke="currentColor"
+      strokeWidth="2.2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <circle cx="9" cy="7" r="3.5" />
+      <path d="M2.5 20 C2.5 15.5 5.5 13.5 9 13.5 C12.5 13.5 15.5 15.5 15.5 20" />
+      <circle cx="17.5" cy="8" r="3" />
+      <path d="M15.5 14 C17.5 14.2 21 15.5 21 20" />
+    </svg>
+  );
+}
+
+function FinancialConsultingIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      className={className}
+      stroke="currentColor"
+      strokeWidth="2.2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <rect x="4" y="2.5" width="16" height="19.5" rx="3.5" />
+      <rect x="7" y="5.5" width="10" height="3.5" rx="1" />
+      {/* 6 outlined grid buttons */}
+      <rect x="7.5" y="11" width="2.8" height="2.2" rx="0.6" strokeWidth="2" />
+      <rect x="13.7" y="11" width="2.8" height="2.2" rx="0.6" strokeWidth="2" />
+      <rect x="7.5" y="14.8" width="2.8" height="2.2" rx="0.6" strokeWidth="2" />
+      <rect x="13.7" y="14.8" width="2.8" height="2.2" rx="0.6" strokeWidth="2" />
+      <rect x="7.5" y="18.2" width="2.8" height="2.2" rx="0.6" strokeWidth="2" />
+      <rect x="13.7" y="18.2" width="2.8" height="2.2" rx="0.6" strokeWidth="2" />
+    </svg>
+  );
+}
+
+// Bullseye Target with Dart / Arrow entering from top-right (Exact match to crop_navy.png)
+function StrategicPlanningIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      className={className}
+      stroke="currentColor"
+      strokeWidth="2.2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      {/* 3 Concentric rings */}
+      <circle cx="11" cy="13" r="8.5" />
+      <circle cx="11" cy="13" r="5.2" />
+      <circle cx="11" cy="13" r="2.2" />
+      {/* Arrow shaft hitting center from top-right */}
+      <path d="M12.5 11.5 L21.5 2.5" />
+      {/* Arrow tip at center */}
+      <path d="M11 13 L15 12" />
+      <path d="M11 13 L12 9" />
+      {/* Arrow feathers at top right */}
+      <path d="M18 2.5 L21.5 2.5 L21.5 6" />
+    </svg>
+  );
+}
+
+// Exact 14-Row Halftone Dot Matrix Pattern Matching media_1794312742109.png
+const DOT_GRID_ROWS = [
+  [{ size: 3.5 }, { size: 3.5 }, { size: 3.5 }, null],
+  [{ size: 4.5 }, { size: 4.5 }, { size: 4.5 }, null],
+  [{ size: 5.5 }, { size: 5.5 }, { size: 5.5 }, { size: 3.5 }],
+  [{ size: 6.5 }, { size: 6.5 }, { size: 6.5 }, { size: 4.2 }],
+  [{ size: 7.5 }, { size: 7.5 }, { size: 7.5 }, { size: 5 }],
+  [{ size: 8.5 }, { size: 8.5 }, { size: 8.5 }, { size: 5.8 }],
+  [{ size: 9.5 }, { size: 9.5 }, { size: 9.5 }, { size: 6.5 }],
+  [{ size: 8.8 }, { size: 8.8 }, { size: 8.8 }, { size: 6 }],
+  [{ size: 7.8 }, { size: 7.8 }, { size: 7.8 }, { size: 5.2 }],
+  [{ size: 6.5 }, { size: 6.5 }, { size: 6.5 }, { size: 4.2 }],
+  [{ size: 5.2 }, { size: 5.2 }, { size: 5.2 }, { size: 3.5 }],
+  [{ size: 4.2 }, { size: 4.2 }, { size: 4.2 }, { size: 2.8 }],
+  [{ size: 3.2 }, { size: 3.2 }, { size: 3.2 }, null],
+  [{ size: 2.5 }, { size: 2.5 }, { size: 2.5 }, null],
+];
 
 export default function HeroSection() {
   const { openBookingModal } = useBookingModal();
@@ -25,25 +132,25 @@ export default function HeroSection() {
     {
       line1: "Profit",
       line2: "Optimization",
-      icon: TrendingUp,
+      icon: ProfitOptimizationIcon,
       href: "/services/profit-optimization",
     },
     {
       line1: "Fractional",
       line2: "CFO Services",
-      icon: Users,
+      icon: FractionalCFOIcon,
       href: "/services/fractional-cfo-services",
     },
     {
       line1: "Financial",
       line2: "Consulting",
-      icon: Calculator,
+      icon: FinancialConsultingIcon,
       href: "/services/financial-consulting-advisory",
     },
     {
       line1: "Strategic",
       line2: "Planning",
-      icon: Target,
+      icon: StrategicPlanningIcon,
       href: "/services/business-strategy-operational-consulting",
     },
     {
@@ -157,15 +264,25 @@ export default function HeroSection() {
             {/* Right Side (Approx 45% / 5 cols) - Clean Rounded Landscape Portrait matching Reference Image 2 */}
             <div className="lg:col-span-5 flex justify-center items-center w-full">
               <div className="relative w-full max-w-[440px] sm:max-w-[480px] lg:max-w-[520px]">
-                {/* Green Dot Grid Matrix on the Right (11 rows x 4 cols, exact match to reference) */}
-                <div className="absolute top-1/2 -right-5 sm:-right-7 -translate-y-1/2 flex flex-col gap-2.5 -z-10 hidden sm:flex">
-                  {[...Array(11)].map((_, rIdx) => (
-                    <div key={rIdx} className="flex gap-2.5">
-                      {[...Array(4)].map((_, cIdx) => (
-                        <span
+                {/* Halftone Emerald Dot Grid Matrix on the Right (14 rows x 4 cols, exact match to media_1794312742109.png) */}
+                <div className="absolute top-1/2 -right-5 sm:-right-7 lg:-right-8 -translate-y-1/2 flex flex-col gap-[7px] -z-10 hidden sm:flex">
+                  {DOT_GRID_ROWS.map((row, rIdx) => (
+                    <div key={rIdx} className="flex gap-[8px] items-center">
+                      {row.map((dot, cIdx) => (
+                        <div
                           key={cIdx}
-                          className="w-1.5 h-1.5 rounded-full bg-[#00D084]"
-                        />
+                          className="w-3 h-3 flex items-center justify-center shrink-0"
+                        >
+                          {dot && (
+                            <span
+                              className="rounded-full bg-[#00D084]"
+                              style={{
+                                width: `${dot.size}px`,
+                                height: `${dot.size}px`,
+                              }}
+                            />
+                          )}
+                        </div>
                       ))}
                     </div>
                   ))}
@@ -205,10 +322,10 @@ export default function HeroSection() {
                   <Link
                     key={index}
                     href={item.href}
-                    className="p-3.5 sm:p-4 lg:p-4.5 flex items-center gap-3.5 hover:bg-white/5 transition-all duration-300 group cursor-pointer"
+                    className="p-3.5 sm:p-4 lg:p-4.5 flex items-center gap-3 sm:gap-3.5 hover:bg-white/5 transition-all duration-300 group cursor-pointer"
                   >
-                    <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-transparent text-[#00D084] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110">
-                      <IconComponent className="w-5 sm:w-6 h-5 sm:h-6 stroke-[2.2]" />
+                    <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-transparent text-[#00D084] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110">
+                      <IconComponent className="w-7 sm:w-7.5 h-7 sm:h-7.5 stroke-[2.2]" />
                     </div>
                     <div className="text-left">
                       <span className="block text-xs sm:text-[13px] font-bold text-slate-100 group-hover:text-white leading-snug">
