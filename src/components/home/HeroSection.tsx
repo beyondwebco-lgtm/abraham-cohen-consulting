@@ -213,11 +213,11 @@ export default function HeroSection() {
           />
         </svg>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+        <div className="max-w-7xl xl:max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           {/* Main Two-Column Hero Composition - Top-aligned per Image 1 */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-start">
-            {/* Left Side (Approx 58% / 7 cols) */}
-            <div className="lg:col-span-7 text-left max-w-3xl">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-12 items-start">
+            {/* Left Side (Approx 58% / 7 cols) - relative z-10 ensures text is always above background */}
+            <div className="lg:col-span-7 xl:col-span-7 text-left relative z-10">
               {/* Mint Pill Badge with Two-Tone Graph Icon - Exact match to Image 1 */}
               <motion.div
                 initial={{ opacity: 0, y: 12 }}
@@ -231,28 +231,28 @@ export default function HeroSection() {
                 </span>
               </motion.div>
 
-              {/* Main Headline - Bold, dominant typography matching Image 1 */}
+              {/* Main Headline - Bold, dominant typography matching Image 1 without overflowing */}
               <motion.div
                 initial={{ opacity: 0, y: 18 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.55, delay: 0.08, ease: "easeOut" }}
-                className="mt-7 sm:mt-8 lg:mt-9"
+                className="mt-6 sm:mt-7 lg:mt-8"
               >
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[66px] xl:text-[70px] font-black font-heading text-[#051D67] leading-[1.08] tracking-[-0.035em]">
-                  <span className="block sm:whitespace-nowrap">Smarter Financial Strategy.</span>
-                  <span className="block mt-1 sm:whitespace-nowrap">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[44px] xl:text-[54px] 2xl:text-[64px] font-black font-heading text-[#051D67] leading-[1.1] tracking-[-0.03em]">
+                  <span className="block">Smarter Financial Strategy.</span>
+                  <span className="block mt-1 sm:mt-1.5">
                     <span className="text-[#00D084]">Stronger</span>{" "}
                     <span className="text-[#051D67]">Business Growth.</span>
                   </span>
                 </h1>
               </motion.div>
 
-              {/* Supporting Paragraph - Larger font and high-contrast navy text */}
+              {/* Supporting Paragraph - High-contrast navy text */}
               <motion.p
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.55, delay: 0.16, ease: "easeOut" }}
-                className="mt-6 sm:mt-7 text-base sm:text-lg lg:text-[20px] text-[#1F2A44] leading-[1.55] max-w-[660px] font-normal"
+                className="mt-5 sm:mt-6 text-base sm:text-lg lg:text-[19px] text-[#1F2A44] leading-[1.55] max-w-[620px] font-normal"
               >
                 Fractional CFO services, profit optimization, and business consulting to help you understand your numbers, improve profitability, and achieve sustainable growth.
               </motion.p>
@@ -262,7 +262,7 @@ export default function HeroSection() {
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.22, ease: "easeOut" }}
-                className="mt-8 sm:mt-9 lg:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-5"
+                className="mt-7 sm:mt-8 lg:mt-9 flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-5"
               >
                 {/* Primary Solid Navy Button */}
                 <button
@@ -287,8 +287,8 @@ export default function HeroSection() {
             </div>
 
             {/* Right Side (Approx 42% / 5 cols) - Landscape Portrait with Mint Backdrop & Halftone Grid */}
-            <div className="lg:col-span-5 flex justify-center lg:justify-end items-start w-full lg:pt-1">
-              <div className="relative w-full max-w-[480px] sm:max-w-[540px] lg:max-w-[580px]">
+            <div className="lg:col-span-5 flex justify-center lg:justify-end items-start w-full lg:pt-1 relative z-0">
+              <div className="relative w-full max-w-[420px] sm:max-w-[460px] lg:max-w-[460px] xl:max-w-[500px]">
                 {/* Decorative Pale Mint Background Shape behind image */}
                 <div className="absolute -inset-4 sm:-inset-6 bg-[#EBF7F2] rounded-[36px] sm:rounded-[42px] -z-10 hidden sm:block" />
 
