@@ -89,7 +89,7 @@ function FractionalCFOIcon({ className }: { className?: string }) {
   );
 }
 
-// Financial Consulting - Calculator with Screen & 6 Filled Keys + Enter Key (Exact Match to calc_zoom.png)
+// Financial Consulting - Calculator with Screen & 6 Filled Keys + Enter Key (Exact Match to calc_zoom_latest.png)
 function FinancialConsultingIcon({ className }: { className?: string }) {
   return (
     <svg
@@ -97,35 +97,35 @@ function FinancialConsultingIcon({ className }: { className?: string }) {
       fill="none"
       className={className}
       stroke="#00D084"
-      strokeWidth="2.3"
+      strokeWidth="2.2"
       strokeLinecap="round"
       strokeLinejoin="round"
     >
       {/* Rounded Calculator Body */}
-      <rect x="4.5" y="2.5" width="15" height="19.5" rx="3.5" />
-      {/* Top Display Screen Line */}
-      <path d="M7 6.8 H17" />
-      {/* Row 1 Keys (3 filled rounded squares) */}
-      <rect x="7.2" y="9.8" width="2.2" height="2" rx="0.4" fill="#00D084" stroke="none" />
-      <rect x="10.9" y="9.8" width="2.2" height="2" rx="0.4" fill="#00D084" stroke="none" />
-      <rect x="14.6" y="9.8" width="2.2" height="2" rx="0.4" fill="#00D084" stroke="none" />
+      <rect x="4.5" y="2.5" width="15" height="19" rx="3.5" />
+      {/* Top Display Screen Slot */}
+      <rect x="6.8" y="5.2" width="10.4" height="2.8" rx="0.8" strokeWidth="1.8" />
+      {/* Row 1 Keys (2 filled rounded squares + 1 horizontal dash key) */}
+      <rect x="7.2" y="10" width="2.2" height="2" rx="0.5" fill="#00D084" stroke="none" />
+      <rect x="10.9" y="10" width="2.2" height="2" rx="0.5" fill="#00D084" stroke="none" />
+      <rect x="14.6" y="10.2" width="2.2" height="1.6" rx="0.4" fill="#00D084" stroke="none" />
       {/* Row 2 Keys */}
-      <rect x="7.2" y="13" width="2.2" height="2" rx="0.4" fill="#00D084" stroke="none" />
-      <rect x="10.9" y="13" width="2.2" height="2" rx="0.4" fill="#00D084" stroke="none" />
+      <rect x="7.2" y="13.2" width="2.2" height="2" rx="0.5" fill="#00D084" stroke="none" />
+      <rect x="10.9" y="13.2" width="2.2" height="2" rx="0.5" fill="#00D084" stroke="none" />
       {/* Row 3 Keys */}
-      <rect x="7.2" y="16.2" width="2.2" height="2" rx="0.4" fill="#00D084" stroke="none" />
-      <rect x="10.9" y="16.2" width="2.2" height="2" rx="0.4" fill="#00D084" stroke="none" />
-      {/* Enter Key on Right spanning Row 2-3 */}
+      <rect x="7.2" y="16.4" width="2.2" height="2" rx="0.5" fill="#00D084" stroke="none" />
+      <rect x="10.9" y="16.4" width="2.2" height="2" rx="0.5" fill="#00D084" stroke="none" />
+      {/* Tall Inverted-L Enter Key on Right Spanning Row 2-3 */}
       <path
-        d="M14.6 13.2 H16.8 V18.2 H14.6 V16.4"
-        strokeWidth="1.6"
+        d="M14.6 13.4 H16.8 V18.2 H14.6"
+        strokeWidth="1.8"
         fill="none"
       />
     </svg>
   );
 }
 
-// Strategic Planning - Concentric Bullseye Target with Arrow (Exact Match to strat_zoom.png)
+// Strategic Planning - Concentric Bullseye Target with Arrow (Exact Match to target_zoom_latest.png)
 function StrategicPlanningIcon({ className }: { className?: string }) {
   return (
     <svg
@@ -137,17 +137,16 @@ function StrategicPlanningIcon({ className }: { className?: string }) {
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      {/* Outer target ring with entrance gap */}
-      <path d="M18.8 8.5 A8.5 8.5 0 1 0 15.5 19.8 A8.5 8.5 0 0 0 19.5 13" />
-      {/* Middle target ring with entrance gap */}
-      <path d="M15.8 9.5 A5.2 5.2 0 1 0 14 16.5 A5.2 5.2 0 0 0 16.2 13" />
+      {/* Outer target ring with arrow entry gap */}
+      <path d="M 14.5 6.0 A 8.5 8.5 0 1 0 18.6 10.9" />
+      {/* Middle target ring with arrow entry gap */}
+      <path d="M 13.0 9.0 A 5.2 5.2 0 1 0 15.4 11.9" />
       {/* Bullseye center ring */}
-      <circle cx="11" cy="13" r="2.2" />
+      <circle cx="10.5" cy="13.5" r="2.2" />
       {/* Arrow shaft hitting center from top-right */}
-      <path d="M12.5 11.5 L20.5 3.5" />
-      {/* Arrow tail fletching feathers */}
-      <path d="M17 3.5 L20.5 3.5 L20.5 7" />
-      <path d="M18.5 2.5 L21.5 2.5 L21.5 5.5" />
+      <path d="M 11.2 12.8 L 19.5 4.5" />
+      {/* Arrow tail fletching V-notch feathers at top right */}
+      <path d="M 16.5 3.8 L 21.0 2.0 L 19.2 6.5" />
     </svg>
   );
 }
@@ -209,8 +208,8 @@ export default function HeroSection() {
 
   return (
     <>
-      <section className="relative pt-28 sm:pt-32 lg:pt-[132px] pb-8 sm:pb-10 lg:pb-12 overflow-hidden min-h-screen flex flex-col justify-between bg-[#FAF7F2]">
-        {/* Organic Flowing Wave Background (Exact Pin-to-Pin Match to Reference Image 2) */}
+      <section className="relative pt-[180px] sm:pt-[195px] lg:pt-[210px] pb-12 sm:pb-16 lg:pb-20 overflow-hidden bg-[#FAF7F2]">
+        {/* Organic Flowing Wave Background (Exact Pin-to-Pin Match to Reference Image 1) */}
         <div
           className="absolute inset-0 pointer-events-none -z-10"
           style={{
@@ -233,31 +232,32 @@ export default function HeroSection() {
           />
         </svg>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full my-auto">
-          {/* Main Two-Column Hero Composition */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-14 items-center">
-            {/* Left Side (Approx 55% / 7 cols) */}
-            <div className="lg:col-span-7 space-y-4 sm:space-y-5 text-left max-w-2xl">
-              {/* Mint Pill Badge with Graph Icon */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+          {/* Main Two-Column Hero Composition - Top-aligned per Image 1 */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-start">
+            {/* Left Side (Approx 58% / 7 cols) */}
+            <div className="lg:col-span-7 text-left max-w-3xl">
+              {/* Mint Pill Badge with Two-Tone Graph Icon - Exact match to Image 1 */}
               <motion.div
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.45, ease: "easeOut" }}
-                className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#D8F5EB] border border-[#B2EBD7] shadow-xs"
+                className="inline-flex items-center gap-2.5 px-5 sm:px-6 py-2.5 rounded-full bg-[#E5F6EE] border border-[#BBEBD8]/60 shadow-xs"
               >
-                <StrategicBadgeIcon className="w-4 h-4 shrink-0" />
-                <span className="text-xs sm:text-[13px] font-semibold text-[#051D67] tracking-tight">
+                <StrategicBadgeIcon className="w-4.5 h-4.5 shrink-0" />
+                <span className="text-xs sm:text-[14px] lg:text-[15px] font-semibold text-[#051D67] tracking-tight">
                   Strategic Financial Advisory for Business Growth
                 </span>
               </motion.div>
 
-              {/* Main Headline - Exactly matching reference styling, strictly single-line per segment */}
+              {/* Main Headline - Bold, dominant typography matching Image 1 */}
               <motion.div
                 initial={{ opacity: 0, y: 18 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.55, delay: 0.08, ease: "easeOut" }}
+                className="mt-7 sm:mt-8 lg:mt-9"
               >
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[43px] xl:text-[47px] font-extrabold font-heading text-[#051D67] leading-[1.13] tracking-tight">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[66px] xl:text-[70px] font-black font-heading text-[#051D67] leading-[1.08] tracking-[-0.035em]">
                   <span className="block sm:whitespace-nowrap">Smarter Financial Strategy.</span>
                   <span className="block mt-1 sm:whitespace-nowrap">
                     <span className="text-[#00D084]">Stronger</span>{" "}
@@ -266,38 +266,38 @@ export default function HeroSection() {
                 </h1>
               </motion.div>
 
-              {/* Supporting Paragraph */}
+              {/* Supporting Paragraph - Larger font and high-contrast navy text */}
               <motion.p
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.55, delay: 0.16, ease: "easeOut" }}
-                className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-xl font-normal"
+                className="mt-6 sm:mt-7 text-base sm:text-lg lg:text-[20px] text-[#1F2A44] leading-[1.55] max-w-[660px] font-normal"
               >
                 Fractional CFO services, profit optimization, and business consulting to help you understand your numbers, improve profitability, and achieve sustainable growth.
               </motion.p>
 
-              {/* CTA Row with Book a Consultation and Watch My Work */}
+              {/* CTA Row with Book a Consultation and Watch My Work - Enlarged dimensions */}
               <motion.div
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.22, ease: "easeOut" }}
-                className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-1"
+                className="mt-8 sm:mt-9 lg:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-5"
               >
                 {/* Primary Solid Navy Button */}
                 <button
                   onClick={() => openBookingModal()}
-                  className="px-6 sm:px-7 py-3 rounded-full text-sm font-bold bg-[#051D67] hover:bg-[#07247a] text-white transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 flex items-center justify-center gap-2 cursor-pointer group"
+                  className="h-14 sm:h-[58px] px-8 sm:px-9 rounded-full text-[15px] sm:text-[16px] font-bold bg-[#051D67] hover:bg-[#07247a] text-white transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 flex items-center justify-center gap-2.5 cursor-pointer group"
                 >
                   <span>Book a Consultation</span>
-                  <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                  <ArrowRight className="w-4 sm:w-4.5 h-4 sm:h-4.5 transition-transform duration-300 group-hover:translate-x-1" />
                 </button>
 
                 {/* Secondary Outlined Button with Play Icon: Watch My Work */}
                 <button
                   onClick={() => setWatchModalOpen(true)}
-                  className="px-6 sm:px-7 py-3 rounded-full text-sm font-bold border border-slate-300 text-[#051D67] bg-white hover:bg-slate-50 transition-all duration-300 flex items-center justify-center gap-2.5 cursor-pointer shadow-xs group"
+                  className="h-14 sm:h-[58px] px-8 sm:px-9 rounded-full text-[15px] sm:text-[16px] font-bold border-2 border-[#051D67] text-[#051D67] bg-white hover:bg-slate-50 transition-all duration-300 flex items-center justify-center gap-2.5 cursor-pointer shadow-xs group"
                 >
-                  <div className="w-5 h-5 rounded-full border border-slate-300 flex items-center justify-center">
+                  <div className="w-5 sm:w-6 h-5 sm:h-6 rounded-full border-2 border-[#051D67] flex items-center justify-center">
                     <Play className="w-2.5 h-2.5 text-[#051D67] fill-current ml-0.5" />
                   </div>
                   <span>Watch My Work</span>
@@ -305,13 +305,16 @@ export default function HeroSection() {
               </motion.div>
             </div>
 
-            {/* Right Side (Approx 45% / 5 cols) - Clean Rounded Landscape Portrait matching Reference Image 2 */}
-            <div className="lg:col-span-5 flex justify-center items-center w-full">
-              <div className="relative w-full max-w-[440px] sm:max-w-[480px] lg:max-w-[520px]">
-                {/* Halftone Emerald Dot Grid Matrix on the Right (14 rows x 4 cols, exact match to media_1794312742109.png) */}
-                <div className="absolute top-1/2 -right-5 sm:-right-7 lg:-right-8 -translate-y-1/2 flex flex-col gap-[7px] -z-10 hidden sm:flex">
+            {/* Right Side (Approx 42% / 5 cols) - Landscape Portrait with Mint Backdrop & Halftone Grid */}
+            <div className="lg:col-span-5 flex justify-center lg:justify-end items-start w-full lg:pt-1">
+              <div className="relative w-full max-w-[480px] sm:max-w-[540px] lg:max-w-[580px]">
+                {/* Decorative Pale Mint Background Shape behind image */}
+                <div className="absolute -inset-4 sm:-inset-6 bg-[#EBF7F2] rounded-[36px] sm:rounded-[42px] -z-10 hidden sm:block" />
+
+                {/* Halftone Emerald Dot Grid Matrix on the Right (14 rows x 4 cols, exact match to Image 1) */}
+                <div className="absolute top-1/2 -right-6 sm:-right-8 lg:-right-10 -translate-y-1/2 flex flex-col gap-[7.5px] -z-10 hidden sm:flex">
                   {DOT_GRID_ROWS.map((row, rIdx) => (
-                    <div key={rIdx} className="flex gap-[8px] items-center">
+                    <div key={rIdx} className="flex gap-[8.5px] items-center">
                       {row.map((dot, cIdx) => (
                         <div
                           key={cIdx}
@@ -332,19 +335,19 @@ export default function HeroSection() {
                   ))}
                 </div>
 
-                {/* Abraham Cohen Portrait Container - Clean rounded landscape rectangle matching Image 2 */}
+                {/* Abraham Cohen Portrait Container - Landscape aspect ratio ~1.28:1 matching Image 1 */}
                 <motion.div
                   initial={{ opacity: 0, scale: 0.96 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.7, delay: 0.18, ease: "easeOut" }}
-                  className="relative w-full aspect-[1.32/1] rounded-[28px] sm:rounded-[32px] overflow-hidden shadow-2xl bg-slate-200 group"
+                  className="relative w-full aspect-[1.28/1] rounded-[28px] sm:rounded-[32px] overflow-hidden shadow-2xl bg-slate-200 group"
                 >
                   <Image
                     src="/hero.webp"
                     alt="Abraham Cohen - Strategic Financial Advisor"
                     fill
                     priority
-                    sizes="(max-width: 640px) 440px, (max-width: 1024px) 480px, 520px"
+                    sizes="(max-width: 640px) 480px, (max-width: 1024px) 540px, 580px"
                     className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.02]"
                   />
                 </motion.div>
@@ -352,12 +355,12 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Floating Dark Navy Service Strip (Exact Match to Reference Image 2) */}
+          {/* Floating Dark Navy Service Strip - Full-width, taller container matching Image 1 */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
-            className="mt-8 sm:mt-10 lg:mt-12 w-full bg-[#051D67] text-white rounded-2xl sm:rounded-3xl shadow-xl overflow-hidden border border-white/10"
+            className="mt-12 sm:mt-14 lg:mt-16 w-full bg-[#051D67] text-white rounded-[26px] sm:rounded-[30px] shadow-2xl overflow-hidden border border-white/10"
           >
             <div className="grid grid-cols-2 md:grid-cols-5 divide-y md:divide-y-0 md:divide-x divide-white/15">
               {stripItems.map((item, index) => {
@@ -366,16 +369,16 @@ export default function HeroSection() {
                   <Link
                     key={index}
                     href={item.href}
-                    className="p-3.5 sm:p-4 lg:p-4.5 flex items-center gap-3 sm:gap-3.5 hover:bg-white/5 transition-all duration-300 group cursor-pointer"
+                    className="py-5 sm:py-6 lg:py-7 px-3.5 sm:px-4 lg:px-5 flex items-center gap-3.5 sm:gap-4.5 justify-center md:justify-start hover:bg-white/5 transition-all duration-300 group cursor-pointer"
                   >
-                    <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-transparent text-[#00D084] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110">
-                      <IconComponent className="w-7 sm:w-7.5 h-7 sm:h-7.5 stroke-[2.2]" />
+                    <div className="w-10 h-10 sm:w-11 sm:h-11 lg:w-12 lg:h-12 rounded-xl bg-transparent text-[#00D084] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110">
+                      <IconComponent className="w-9 sm:w-10 lg:w-11 h-9 sm:h-10 lg:h-11 stroke-[2.3]" />
                     </div>
                     <div className="text-left">
-                      <span className="block text-xs sm:text-[13px] font-bold text-slate-100 group-hover:text-white leading-snug">
+                      <span className="block text-sm sm:text-[15px] lg:text-[16px] font-bold text-white group-hover:text-slate-100 leading-snug">
                         {item.line1}
                       </span>
-                      <span className="block text-xs sm:text-[13px] font-bold text-slate-100 group-hover:text-white leading-snug">
+                      <span className="block text-sm sm:text-[15px] lg:text-[16px] font-bold text-white group-hover:text-slate-100 leading-snug">
                         {item.line2}
                       </span>
                     </div>
